@@ -4,21 +4,21 @@ module.exports = {
   entry: './src/game.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         include: path.resolve(__dirname, 'src'),
-        loader: 'ts-loader'
+        loader: 'ts-loader',
       },
       {
         test: require.resolve('phaser'),
         loader: 'expose-loader',
-        options: { exposes: { globalName: 'phaser', override: true } }
-      }
-    ]
+        options: { exposes: { globalName: 'phaser', override: true } },
+      },
+    ],
   },
   devServer: {
     host: 'localhost',
@@ -29,9 +29,9 @@ module.exports = {
     },
     static: {
       directory: path.join(__dirname, './'),
-    }
+    },
   },
   resolve: {
-    extensions: ['.ts', '.js']
-  }
+    extensions: ['.ts', '.js'],
+  },
 };

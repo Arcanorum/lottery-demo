@@ -1,6 +1,7 @@
-import { MainScene } from './scenes/main-scene';
+import BootScene from './scenes/boot-scene';
+import ModeSelectScene from './scenes/mode-select-scene';
 
-export const GameConfig: Phaser.Types.Core.GameConfig = {
+const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Webpack-Boilerplate',
   url: 'https://github.com/digitsensitive/phaser3-typescript',
   version: '2.0',
@@ -12,8 +13,10 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 200 }
-    }
+      gravity: { y: 200 },
+    },
   },
-  scene: [MainScene]
+  scene: [BootScene, ModeSelectScene],
 };
+
+export default GameConfig;
