@@ -1,7 +1,7 @@
-import getUniqueRandomElements from '../get-unique-random-elements';
-import ModeButton from '../mode-button';
-import Modes from '../modes';
-import numberRange from '../number-range';
+import getUniqueRandomElements from '../utils/get-unique-random-elements';
+import ModeButton from './mode-button';
+import Modes from '../utils/modes';
+import numberRange from '../utils/number-range';
 
 export default class ModeSelectScene extends Phaser.Scene {
     selectedMode: Modes;
