@@ -1,7 +1,6 @@
 {
-    "name": "webpack-boilerplate",
-    "version": "2.0.2",
-    "description": "Webpack-Boilerplate for Phaser 3 in TypeScript",
+    "name": "lottery-demo",
+    "description": "Lottery demo game in Phaser 3 & TypeScript",
     "keywords": [],
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.29.0",
@@ -23,19 +22,8 @@
     },
     "scripts": {
         "dev": "webpack --mode development && webpack serve --mode development",
+        "build": "webpack --mode production",
         "test": "jest"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/digitsensitive/phaser3-typescript.git"
-    },
-    "author": {
-        "name": "digitsensitive",
-        "email": "digit.sensitivee@gmail.com"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/digitsensitive/phaser3-typescript/issues"
-    },
-    "homepage": "https://github.com/digitsensitive/phaser3-typescript#readme"
+    "license": "MIT"
 }
