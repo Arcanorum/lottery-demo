@@ -1,4 +1,4 @@
-export default class ModeButton extends Phaser.GameObjects.Container {
+export default class NumberButton extends Phaser.GameObjects.Container {
     image: Phaser.GameObjects.Image;
 
     constructor(
@@ -20,7 +20,7 @@ export default class ModeButton extends Phaser.GameObjects.Container {
 
         this.setScale(baseScale);
 
-        this.image = config.scene.add.image(0, 0, 'mode-button-default')
+        this.image = config.scene.add.image(0, 0, 'number-button-default')
             .setOrigin(0.5)
             .setScale(0.6)
             .setInteractive();
@@ -44,10 +44,10 @@ export default class ModeButton extends Phaser.GameObjects.Container {
     }
 
     select() {
-        this.image.setTexture('mode-button-selected');
+        this.image.setTexture('number-button-selected');
     }
 
     deselect() {
-        this.image.setTexture('mode-button-default');
+        this.image.setTexture('number-button-default');
     }
 }

@@ -1,10 +1,8 @@
 import BootScene from './scenes/boot-scene';
 import ModeSelectScene from './scenes/mode-select-scene';
+import NumberSelectScene from './scenes/number-select-scene';
 
 const GameConfig: Phaser.Types.Core.GameConfig = {
-    title: 'Webpack-Boilerplate',
-    url: 'https://github.com/digitsensitive/phaser3-typescript',
-    version: '2.0',
     width: 1000,
     height: 600,
     backgroundColor: 0x3a404d,
@@ -19,7 +17,7 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
             gravity: { y: 200 },
         },
     },
-    scene: [BootScene, ModeSelectScene],
+    scene: [BootScene, ModeSelectScene, NumberSelectScene],
 };
 
 export default GameConfig;
