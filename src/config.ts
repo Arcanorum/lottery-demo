@@ -1,4 +1,5 @@
 import BootScene from './scenes/boot-scene';
+import GameScene from './scenes/game-scene';
 import ModeSelectScene from './scenes/mode-select-scene';
 import NumberSelectScene from './scenes/number-select-scene';
 
@@ -11,13 +12,12 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
     parent: 'game',
-    physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 200 },
-        },
-    },
-    scene: [BootScene, ModeSelectScene, NumberSelectScene],
+    scene: [
+        BootScene,
+        ModeSelectScene,
+        NumberSelectScene,
+        GameScene,
+    ],
 };
 
 export default GameConfig;
