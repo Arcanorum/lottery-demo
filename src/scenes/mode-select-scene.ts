@@ -17,6 +17,8 @@ export default class ModeSelectScene extends Phaser.Scene {
     }
 
     create() {
+        this.selectedMode = null;
+
         const centerX = this.cameras.main.width / 2;
 
         this.manualPickButton = new ModeButton({
@@ -53,7 +55,8 @@ export default class ModeSelectScene extends Phaser.Scene {
             onClick: () => {
                 if (this.selectedMode === Modes.manualPick) {
                     this.scene.start('NumberSelect');
-                } else if (this.selectedMode === Modes.luckyDip) {
+                }
+                else if (this.selectedMode === Modes.luckyDip) {
                     this.scene.start('Game', {
                         // Pick some random numbers for lucky dip mode.
                         numbers: getUniqueRandomElements(numberRange, 6),

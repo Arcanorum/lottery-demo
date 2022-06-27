@@ -19,13 +19,13 @@ export default class GameScene extends Phaser.Scene {
 
     nextNumberBall: INumberBall;
 
-    rolledNumbers: Array<number> = [];
+    rolledNumbers: Array<number>;
 
     infoText: Phaser.GameObjects.Text;
 
-    selectedNumbers: Array<number> = [];
+    selectedNumbers: Array<number>;
 
-    selectedNumberIcons: Array<NumberIcon> = [];
+    selectedNumberIcons: Array<NumberIcon>;
 
     constructor() {
         super({ key: 'Game' });
@@ -36,6 +36,9 @@ export default class GameScene extends Phaser.Scene {
     }
 
     create() {
+        this.rolledNumbers = [];
+        this.selectedNumberIcons = [];
+
         const centerX = this.cameras.main.width / 2;
 
         this.playAgainButton = new ModeButton(

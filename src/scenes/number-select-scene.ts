@@ -5,9 +5,9 @@ import NumberButton from './number-button';
 export default class NumberSelectScene extends Phaser.Scene {
     infoText: Phaser.GameObjects.Text;
 
-    numberButtons: Array<NumberButton> = [];
+    numberButtons: Array<NumberButton>;
 
-    selectedNumbers: Array<number> = [];
+    selectedNumbers: Array<number>;
 
     playButton: ModeButton;
 
@@ -19,6 +19,9 @@ export default class NumberSelectScene extends Phaser.Scene {
         const centerX = this.cameras.main.width / 2;
 
         this.infoText = this.add.text(centerX, 50, 'Select your picks').setOrigin(0.5);
+
+        this.selectedNumbers = [];
+        this.numberButtons = [];
 
         this.populateNumberGrid();
 
