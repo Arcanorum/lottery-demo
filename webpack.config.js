@@ -18,6 +18,10 @@ module.exports = {
                 loader: 'expose-loader',
                 options: { exposes: { globalName: 'phaser', override: true } },
             },
+            {
+                test: /\.png/,
+                type: 'asset/resource'
+            }
         ],
     },
     devServer: {
