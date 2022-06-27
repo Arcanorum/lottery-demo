@@ -18,7 +18,15 @@ module.exports = {
                 project: './tsconfig.json',
             },
             rules: {
-                "@typescript-eslint/indent": ["error", 4],
+                "@typescript-eslint/indent": [
+                    "error",
+                    4
+                ],
+                '@typescript-eslint/brace-style': [
+                    'warn',
+                    'stroustrup',
+                    { allowSingleLine: true },
+                ],
             }
         }
     ],
